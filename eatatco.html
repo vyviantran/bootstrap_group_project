@@ -29,6 +29,45 @@
             font-family: 'Raleway', sans-serif;
         }
 
+        #headline {
+            z-index: 2;
+            position:absolute;
+            width: 100%;
+            top: 600px;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        p {
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        #headline-buttons {
+            position: absolute;
+            top: 700px;
+            width: 100%;
+            z-index: 2;
+            font-family: 'Raleway';
+            font-weight: 50;
+            font-size: 14pt;
+        }
+
+        #carousel-row-container { 
+            z-index: 1
+        }
+
         #about,
         #giftcards,
         #press {
@@ -140,12 +179,12 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="#">OVERVIEW</a></li>
-                                <li><a class="dropdown-item" href="#">CHARLESTON</a></li>
-                                <li><a class="dropdown-item" href="#">CHARLOTTE-WAVERLY</a></li>
-                                <li><a class="dropdown-item" href="#">CHARLOTTE - PARK ROAD</a></li>
-                                <li><a class="dropdown-item" href="#">MYRTLE BEACH</a></li>
-                                <li><a class="dropdown-item" href="#">RALEIGH</a></li>
-                                <li><a class="dropdown-item" href="#">SAVANNAH</a></li>
+                                <li><a class="dropdown-item" href="locations/charleston.html">CHARLESTON</a></li>
+                                <li><a class="dropdown-item" href="locations/charlotte-waverly.html">CHARLOTTE-WAVERLY</a></li>
+                                <li><a class="dropdown-item" href="locations/charlotte-park.html">CHARLOTTE - PARK ROAD</a></li>
+                                <li><a class="dropdown-item" href="locations/myrtle-beach.html">MYRTLE BEACH</a></li>
+                                <li><a class="dropdown-item" href="locations/raleigh.html">RALEIGH</a></li>
+                                <li><a class="dropdown-item" href="locations/savannah.html">SAVANNAH</a></li>
                             </ul>
                         </li>
                         <a class="nav-link active" id="about" aria-current="page" href="#">ABOUT</a>
@@ -163,14 +202,25 @@
             </div>
         </nav>
     </header>
+    
+
+
 
     <div class="container-fluid" id="page-content">
-
+        <div class="row" id ="headline">
+            <h1>A MODERN TAKE ON TRADITIONAL SOUTHEAST ASIAN CUISINE</h1>
+            <p>Pho | Ramen | Dumplings | Banh Mi | Sushi | Cocktails</p>
+        </div>
+        <div id="headline-buttons">
+            <a class="btn btn-danger" href="locations/charleston.html" role="button">CHARLESTON</a>
+            <a class="btn btn-danger" href="locations/charlotte-waverly.html" role="button">CHARLOTTE - WAVERLY</a>
+            <a class="btn btn-danger" href="locations/charlotte-park.html" role="button">CHARLOTTE - PARK ROAD</a>
+            <a class="btn btn-danger" href="locations/myrtle-beach.html" role="button">MYRTLE BEACH</a>
+            <a class="btn btn-danger" href="locations/raleigh.html" role="button">RALEIGH</a>
+            <a class="btn btn-danger" href="locations/savannah.html" role="button">SAVANNAH</a>
+        </div>
         <!-- carousel container row-->
         <div class="row" id="carousel-row-container">
-
-
-
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- active = ? -->
@@ -224,9 +274,6 @@
                     </div>
                     <!-- close carousel -->
                 </div>
-
-
-
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
