@@ -31,32 +31,15 @@
 
         #headline {
             z-index: 2;
-            position:absolute;
+            position: absolute;
             width: 100%;
-            top: 600px;
-        }
-
-        h1 {
-            color: white;
-            font-family: 'Arial Black', sans-serif;
-            font-weight: 400;
-            font-size: 2rem;
-            line-height: 1.5;
-            text-align: center;
-        }
-        
-        p {
-            color: white;
-            font-family: 'Arial', sans-serif;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.5;
-            text-align: center;
+            top: 35vh;
+            
         }
 
         #headline-buttons {
             position: absolute;
-            top: 700px;
+            top: 55vh;
             width: 100%;
             z-index: 2;
             font-family: 'Raleway';
@@ -64,8 +47,22 @@
             font-size: 14pt;
         }
 
-        #carousel-row-container { 
-            z-index: 1
+        #headline h1 {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        p {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
         }
 
         #about,
@@ -136,20 +133,37 @@
             overflow: hidden;
         }
 
+        #carousel-row-container, .carousel-item { 
+            height: 80vh;
+            z-index: 1;
+        }
+
         .carousel-item img {
+            object-fit: cover;
+            min-height: 80vh;
             opacity: 0.5;
+        }
+
+        button.carousel-control-prev, button.carousel-control-next {
+            z-index: 3;
         }
 
         #collect-logo-div {
             padding: 60px 0 100px 0;
         }
 
-        .img1 {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+        /* set columns containing instagram pics to 1/5 of viewport (5 pics per row) */
+        .instagram-row .col {
+            width: 20vw;
         }
+
+        /* square images by setting heigh and width = container width */
+        .instagram-row img {
+            width: 20vw;
+            height: 20vw;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 
@@ -207,10 +221,18 @@
 
 
     <div class="container-fluid" id="page-content">
+        <!-- headline -->
         <div class="row" id ="headline">
-            <h1>A MODERN TAKE ON TRADITIONAL SOUTHEAST ASIAN CUISINE</h1>
-            <p>Pho | Ramen | Dumplings | Banh Mi | Sushi | Cocktails</p>
+            <div class="col"></div>
+            <div class="col-9">
+                <h1>A MODERN TAKE ON TRADITIONAL SOUTHEAST ASIAN CUISINE</h1>
+                <p>Pho | Ramen | Dumplings | Banh Mi | Sushi | Cocktails</p>
+            </div>
+            <div class="col"></div>
+        <!-- close headline -->
         </div>
+        
+        <!-- location buttons -->
         <div id="headline-buttons">
             <a class="btn btn-danger" href="locations/charleston.html" role="button">CHARLESTON</a>
             <a class="btn btn-danger" href="locations/charlotte-waverly.html" role="button">CHARLOTTE - WAVERLY</a>
@@ -218,7 +240,9 @@
             <a class="btn btn-danger" href="locations/myrtle-beach.html" role="button">MYRTLE BEACH</a>
             <a class="btn btn-danger" href="locations/raleigh.html" role="button">RALEIGH</a>
             <a class="btn btn-danger" href="locations/savannah.html" role="button">SAVANNAH</a>
+        <!-- close location buttons -->
         </div>
+
         <!-- carousel container row-->
         <div class="row" id="carousel-row-container">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -291,37 +315,37 @@
         </div>
 
         <!-- instagram photoset -->
-        <div class="row row-cols-5">
-            <div class="col, img1"><img
+        <div class="row row-cols-5 instagram-row">
+            <div class="col g-0"><img
                     src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/294565523_5209104962492695_5838330383499328015_n.jpg?stp=dst-jpg_p526x296&_nc_cat=102&ccb=1-7&_nc_sid=a26aad&_nc_ohc=YIPib2gUaw4AX_JTr8W&_nc_ht=scontent-lax3-1.xx&oh=00_AT883cCiLSFeKQcHz_9lOnXnlBnoVN6cfmBLyXOgOT76Lg&oe=62E0D408"
-                    class="img-fluid" alt="dumplings"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Dumplings"></div>
+            <div class="col g-0"><img
                     src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/291333225_5169288239807701_3310840136194302064_n.jpg?stp=dst-jpg_p180x540&_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=G9wE-F4xaW4AX_MOGVz&_nc_ht=scontent-lax3-1.xx&oh=00_AT_2mud9dM-L49wgbACWR4EaNZ9E-BLS-1O2cJjnZzWtQw&oe=62E09D6A"
-                    class="img-fluid" alt="soup"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Soup"></div>
+            <div class="col g-0"><img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdH3ZHntKP5JJmHYnOPHyXzbEp8zDug84gjg&usqp=CAU"
-                    class="img-fluid" alt="sushi"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Sushi"></div>
+            <div class="col g-0"><img
                     src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/286165021_5087703364632856_6245100634482855184_n.jpg?stp=dst-jpg_p526x296&_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=WIHbz-NyySsAX8vYIOJ&_nc_ht=scontent-lax3-1.xx&oh=00_AT_eCLiU5pYHPea5rjE-jwE5IdQaLm5sEpc3ybnoB3aJnQ&oe=62E043A8"
                     class="img-fluid" alt="Tacos"></div>
-            <div class="col, img1"><img
+            <div class="col g-0"><img
                     src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/284267590_5056251811111345_6768614885547258163_n.jpg?stp=dst-jpg_p526x296&_nc_cat=102&ccb=1-7&_nc_sid=a26aad&_nc_ohc=TMoAO8YTy6kAX9MJZlK&_nc_ht=scontent-lax3-1.xx&oh=00_AT9adV5KCL2dN8AlNOIuF4ms1t0YZROWo96u0TZb4hhg1Q&oe=62E17593"
                     class="img-fluid" alt="Mojito"></div>
-            <div class="col, img1"><img
+            <div class="col g-0"><img
                     src="https://storage.googleapis.com/inspitrip-blog/global/2016/11/Picture2.png"
-                    class="img-fluid" alt="bahnmi"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Banh mi"></div>
+            <div class="col g-0"><img
                     src="https://media-int.vnecdn.net/4027097/data/images/2019/12/14/trangpinkyy_1576285452_VnEx.jpg"
-                    class="img-fluid" alt="springroll"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Spring rolls"></div>
+            <div class="col g-0"><img
                     src="https://www.foodrepublic.com/wp-content/uploads/2016/02/mopho-pho.jpg"
-                    class="img-fluid" alt="noodles"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Noodles"></div>
+            <div class="col g-0"><img
                     src="https://www.savoredjourneys.com/wp-content/uploads/2018/02/vietnamese-pho-feat.jpg"
-                    class="img-fluid" alt="pho"></div>
-            <div class="col, img1"><img
+                    class="img-fluid" alt="Pho"></div>
+            <div class="col g-0"><img
                     src="https://img.taste.com.au/JgL7Urok/w1200-h630-cfill/taste/2016/11/vietnamese-fried-rice-86309-1.jpeg"
-                    class="img-fluid" alt="friedrice"></div>
+                    class="img-fluid" alt="Fried rice"></div>
         </div>
         <!-- close instagram photoset -->
 
