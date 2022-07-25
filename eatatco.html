@@ -15,7 +15,8 @@
         #nav-container {
             position: fixed;
             background-color: rgba(0, 0, 0, 0);
-            top: 15px;
+            top: 0px;
+            padding: 15px;
             z-index: 10;
         }
 
@@ -29,22 +30,19 @@
             font-family: 'Raleway', sans-serif;
         }
 
-        #headline {
+        #headline-container {
             z-index: 2;
             position: absolute;
             width: 100%;
             top: 35vh;
+            text-align: center;
             
         }
 
-        #headline-buttons {
-            position: absolute;
-            top: 55vh;
-            width: 100%;
-            z-index: 2;
-            font-family: 'Raleway';
-            font-weight: 50;
-            font-size: 14pt;
+        #headline-buttons .btn {
+            margin: 10px;
+            border-radius: 0;
+            background-color: red;
         }
 
         #headline h1 {
@@ -56,7 +54,7 @@
             text-align: center;
         }
         
-        p {
+        #headline p {
             color: white;
             font-family: 'Raleway', sans-serif;
             font-weight: bold;
@@ -85,9 +83,11 @@
             background-color: red;
         }
 
-        #button {
+        #order-button {
             background-color: red;
             border-color: red;
+            margin-left: 10px;
+            border-radius: 0;
         }
 
         #collect_img {
@@ -210,7 +210,7 @@
                             <a class="nav-link" id="press" href="#">PRESS</a>
                     </ul>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary me-md-2" id="button" type="button">ORDER ONLINE</button>
+                        <button class="btn btn-primary me-md-2" id="order-button" type="button">ORDER ONLINE</button>
                     </div>
                 </div>
             </div>
@@ -221,26 +221,33 @@
 
 
     <div class="container-fluid" id="page-content">
-        <!-- headline -->
-        <div class="row" id ="headline">
-            <div class="col"></div>
-            <div class="col-9">
-                <h1>A MODERN TAKE ON TRADITIONAL SOUTHEAST ASIAN CUISINE</h1>
-                <p>Pho | Ramen | Dumplings | Banh Mi | Sushi | Cocktails</p>
+
+        <div class="container-fluid" id="headline-container">
+            <!-- headline -->
+            <div class="row" id="headline">
+                <div class="col"></div>
+                <div class="col-9">
+                    <h1>A MODERN TAKE ON TRADITIONAL SOUTHEAST ASIAN CUISINE</h1>
+                    <p>Pho | Ramen | Dumplings | Banh Mi | Sushi | Cocktails</p>
+                </div>
+                <div class="col"></div>
+            <!-- close headline -->
             </div>
-            <div class="col"></div>
-        <!-- close headline -->
-        </div>
-        
-        <!-- location buttons -->
-        <div id="headline-buttons">
-            <a class="btn btn-danger" href="locations/charleston.html" role="button">CHARLESTON</a>
-            <a class="btn btn-danger" href="locations/charlotte-waverly.html" role="button">CHARLOTTE - WAVERLY</a>
-            <a class="btn btn-danger" href="locations/charlotte-park.html" role="button">CHARLOTTE - PARK ROAD</a>
-            <a class="btn btn-danger" href="locations/myrtle-beach.html" role="button">MYRTLE BEACH</a>
-            <a class="btn btn-danger" href="locations/raleigh.html" role="button">RALEIGH</a>
-            <a class="btn btn-danger" href="locations/savannah.html" role="button">SAVANNAH</a>
-        <!-- close location buttons -->
+            
+            <div class="row" id="headline-buttons">
+                <div class="col"></div>
+                <!-- location buttons -->
+                <div class="col-9">
+                <a class="btn btn-danger" href="locations/charleston.html" role="button">CHARLESTON</a>
+                <a class="btn btn-danger" href="locations/charlotte-waverly.html" role="button">CHARLOTTE - WAVERLY</a>
+                <a class="btn btn-danger" href="locations/charlotte-park.html" role="button">CHARLOTTE - PARK ROAD</a>
+                <a class="btn btn-danger" href="locations/myrtle-beach.html" role="button">MYRTLE BEACH</a>
+                <a class="btn btn-danger" href="locations/raleigh.html" role="button">RALEIGH</a>
+                <a class="btn btn-danger" href="locations/savannah.html" role="button">SAVANNAH</a>
+                <!-- close location buttons -->
+                </div>
+                <div class="col"></div>
+            </div>
         </div>
 
         <!-- carousel container row-->
